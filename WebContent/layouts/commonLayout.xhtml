@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+	
+	<!-- Page Head -->
+	<h:head>
+		<title>
+			<ui:insert name="title" >
+				JSF In-Class Activity
+			</ui:insert>
+			<h:outputStylesheet library="css" name="common-style.css" />
+		</title>
+	</h:head>
+	
+	<h:body>
+		<!-- Header Position-->
+		<div id="header" align="center">
+			<ui:insert name="header">
+				<ui:include src="/layouts/commonHeader.xhtml" />
+			</ui:insert>
+			<br/>
+			<br/>
+		</div>
+		
+		<!-- Content Position -->
+		<div id="content">
+			<ui:insert name="content" align="center">
+				<ui:include src="/layouts/commonContent.xhtml" />
+			</ui:insert>
+		</div>
+		
+		<!-- Footer Position -->
+		<div id="footer" align="center">
+			<br/>
+			<br/>
+			<ui:insert name="footer">
+				<ui:include src="/layouts/commonFooter.xhtml" />
+			</ui:insert>
+		</div>
+	</h:body> 
+</html>
