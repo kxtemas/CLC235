@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+	<h:body>
+		<ui:composition template="/layouts/commonLayout.xhtml">
+		
+			<!-- Defining Page Title's Content -->
+			<ui:define name="title">
+					 JSF Response Page
+			</ui:define>
+			
+			<!-- Defining Page Content's Content -->
+			<ui:define name="content">
+				<div align="center" class="contentStyle">
+					Hello #{user.firstName} #{user.lastName} <br />
+					Your orders are:
+					
+					<!-- Data Table -->
+					<h:dataTable value="#{orders.orders}" 
+					var="o"
+					styleClass="tableStyle"
+					headerClass="tableHeaderStyle"
+					rowClasses="tableOddRowStyle, tableEvenRowStyle">
+						<!-- Order ID Number Column -->
+						<h:column>
+							<f:facet name="header">ID</f:facet>
+							#{o.orderNumber}
+						</h:column>
+						
+						<!-- Order Name Column -->
+						<h:column>
+							<f:facet name="header">Name</f:facet>
+							#{o.orderProductName}
+						</h:column>
+						
+						<!-- Order Price Column -->
+						<h:column>
+							<f:facet name="header">Price</f:facet>
+							#{o.orderPrice}
+						</h:column>
+						
+						<!-- Order Quantity Column -->
+						<h:column>
+							<f:facet name="header">Quantity</f:facet>
+							#{o.orderQuantity}
+						</h:column>
+					</h:dataTable>
+					
+					<br/>
+					
+					<!-- Login in Again Button -->
+					<h:form>
+						<h:button class="button" value="Login Again" outcome="TestForm.xhtml" />
+					</h:form>
+				</div>
+			</ui:define>
+		</ui:composition>
+	</h:body> 
+</html>
