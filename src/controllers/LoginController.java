@@ -1,6 +1,6 @@
 package controllers;
 
-import javax.faces.bean.ManagedBean; 
+import javax.faces.bean.ManagedBean;  
 import javax.faces.context.FacesContext;
 import beans.User;
 
@@ -13,8 +13,8 @@ public class LoginController {
 		User user = context.getApplication().evaluateExpressionGet(context, "#{user}", User.class);
 		//shows the user object data in the console log
 		System.out.println("----------------------------------------------");
-		System.out.println("the username is " + user.getUserName());
-		System.out.println("the password is " + user.getPassWord());
+		System.out.println("the username is " + user.getUsername());
+		System.out.println("the password is " + user.getPassword());
 	
 		//put the user object into the POST request
 		FacesContext.getCurrentInstance().getExternalContext().getRequestMap().put("user", user);

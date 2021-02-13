@@ -2,36 +2,113 @@ package beans;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @ManagedBean
 @ViewScoped
-public class User {
-	private String userName;
-	private String passWord;
+public class User
+{	
+	//Setting user first name with constraints
+	@NotNull(message = "Please enter a first name")
+	@Size(min=5, max=15)
+	String firstName = "";
 	
+	//Setting user last name with constraints
+	@NotNull(message = "Please enter a last name")
+	@Size(min=5, max=15)
+	String lastName = "";
+	
+	//Setting user email with constraints
+	@NotNull(message = "Please enter an email")
+	@Size(min=5, max=15)
+	String email = "";
+	
+	//Setting username with constraints
+	@NotNull(message = "Please enter an username")
+	@Size(min=5, max=15)
+	String username = "";
+	
+	//Setting password with constraints
+	@NotNull(message = "Please enter a password")
+	@Size(min=5, max=15)
+	String password = "";
+	
+	//Setting password with constraints
+	@NotNull(message = "Please enter a birthdate")
+	@Size(min=5, max=15)
+	String birthdate = "";
+	
+	//Constructor
 	public User()
 	{
-		userName = "katie";
-		passWord = "munoz";
+		firstName = "";
+		lastName = "";
+		email = "";
+		username = "";
+		password = "";
+		birthdate = "";
 	}
 
-	public String getUserName() {
-		return userName;
+	//First Name Getter
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	//First Name Setter
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getPassWord() {
-		return passWord;
+	//Last Name Getter
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+	//Last Name Setter
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
+	//Email Getter
+	public String getEmail() {
+		return email;
+	}
+
+	//Email Setter
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	//Username Getter
+	public String getUsername() {
+		return username;
+	}
+
+	//Username Setter
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	//Password Getter
+	public String getPassword() {
+		return password;
+	}
+
+	//Password Setter
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	//Birthdate Getter
+	public String getBirthdate() {
+		return birthdate;
+	}
+
+	//Birthdate Setter
+	public void setBirthdate(String birthdate) {
+		this.birthdate = birthdate;
+	}
 
 	
-
 }
