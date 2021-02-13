@@ -9,6 +9,22 @@
 	</h:head>
 	
 	<body> 
+		<ui:composition template="/layouts/commonLayout.xhtml">
 		
+			<!-- Defining Page Title's Content -->
+			<ui:define name="title">
+			 	JSF Form Page
+			</ui:define>
+			
+			<!-- Defining Page Content's Content -->
+			<ui:define name="content">
+				<div align="center" class="contentStyle">
+					<!-- Creating Login Form -->
+					<h:form>
+						First Name:
+					</h:form>
+				</div>
+			</ui:define>
+		</ui:composition>
 	</body> 
 </html>
