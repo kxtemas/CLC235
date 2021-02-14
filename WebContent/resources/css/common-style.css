@@ -13,33 +13,33 @@ h5
  	 font-style: italic;
 }
 
-.headerStyle
+.header
 {
  	 font-family: "Times New Roman";
  	 font-size: 40px;
 }
 
-.contentStyle
+.content
 {
  	font-family: "Copperplate";
  	 font-size: 20px;
 }
 
-.footerStyle
+.footer
 {
  	 font-family: "Courier New";
  	 font-size: 15px;
  	 font-style: italic;
 }
 
-.tableStyle
+.order-table
 {
 	font-family: "Courier New";
  	font-size: 15px;
  	font-style: italic;
 }
 
-.tableHeaderStyle
+.order-table-header
 {
 	font-family: "Courier New";
  	font-size: 15px;
@@ -47,18 +47,22 @@ h5
  	font-weight: bold;
 }
 
-.tableOddRowStyle
+.order-table-odd-row
 {
 	font-family: "Courier New";
  	font-size: 15px;
  	font-style: normal;
  	background-color: teal;
+ 	border-top: 1px solid #6791bb;
 }
 
-.tableEvenRowStyle
+.order-table-even-row
 {
 	font-family: "Courier New";
  	font-size: 15px;
  	font-style: normal;
  	background-color: green;
+ 	border-top:1px solid #6791bb
+}
+
 }
