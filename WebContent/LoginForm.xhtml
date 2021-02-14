@@ -10,12 +10,13 @@ form {border: 3px solid #FFF8DC;}
 body{background:#FFF8DC}
 
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  position: center;
 }
 
 button {
@@ -25,7 +26,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 30%;
 }
 
 button:hover {
@@ -50,22 +51,13 @@ img.avatar {
 
 .container {
   padding: 16px;
+  margin-left: auto;
+    margin-right: auto;
+    width: 30em
 }
 
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
+
 }
 </style>
 </head>
@@ -75,20 +67,22 @@ span.psw {
 
 <h:form>
   <div class="imgcontainer">
-    <img src="/resources/images/siteLogo.png" alt="Avatar" class="avatar"></img>
+    <img src="/assignment2b/WebContent/resources/images/siteLogo.png" alt="Avatar" class="avatar"></img>
   </div>
 
   <div class="container">
     <!--  <label for="uname"><b>Username</b></label>-->
     
-    <input type="text"> <h:inputText value= "#{user.username}"/></input>
-    
+   <h2>Username:</h2><h:inputText value= "#{user.username}"/>
+    <br/>
    
-    <input type="text"> <h:inputText value= "#{user.password}"/></input>
+   <h2>Password:</h2><h:inputText value= "#{user.password}"/><br/>
    <!--   <input type="password" placeholder="Enter Password" name="psw" required>-->
         
-  <button type="submit"><h:commandButton action="#{user.authenticate()}" value="Login" /></button>
-      </div>
+ 
+   <button type="submit"><h:commandButton action="#{user.authenticate()}" value="Login"/></button>
+
+     </div>
 </h:form>
 
 </h:body>
