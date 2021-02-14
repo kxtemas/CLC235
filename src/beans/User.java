@@ -37,7 +37,7 @@ public class User
 	//Setting password with constraints
 	@NotNull(message = "Please enter a birthdate")
 	@Size(min=5, max=15)
-	String birthdate = "";
+	int birthdate = "";
 	
 	//Constructor
 	public User()
