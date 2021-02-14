@@ -33,10 +33,10 @@
 						Password: <h:inputText id="password" value="#{user.password}" title="" /> <br/>
 						<h:message for="password"/> <br/>
 						
-						Birthdate: <h:inputText id="birthdate" value="#{user.bithdate}" title="" /> <br/>
+						Birthdate: <h:inputText id="birthdate" value="#{user.birthdate}" title="" /> <br/>
 						<h:message for="birthdate"/> <br/>
 						
-						<h:commandButton value="Register Account" action="#{formController.onSubmit(user)}" class="contentStyle"> </h:commandButton>
+						<h:commandButton value="Register Account" action="#{user.register()}" class="contentStyle"> </h:commandButton>
 					</h:form>
 				</div>
 			</ui:define>

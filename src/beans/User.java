@@ -1,7 +1,10 @@
 package beans;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 import javax.faces.bean.ManagedBean;
@@ -143,5 +146,29 @@ public class User {
 			return "LoginFail.xhtml";
 		}
 
+	}
+	public String register()
+	{
+		boolean success=false;
+		String newUser= username+ ","+password;
+		try {
+			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/munoz/cst235/assignment2b/src/beans/users.txt", true));
+			writer.newLine();
+			writer.write(newUser);
+			writer.close();
+			success=true;
+		}
+		catch(IOException e) {
+			System.out.println("Error");	
+		}
+		if (success) {
+			return "LoginForm.xthml";
+		}
+		else {
+			return "LoginForm.xthml";
+		}
+				
+		
+		
 	}
 }
