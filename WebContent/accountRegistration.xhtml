@@ -10,19 +10,34 @@
 		
 			<!-- Defining Page Title's Content -->
 			<ui:define name="title">
-			 	JSF Form Page
+			 	Register New Account
 			</ui:define>
 			
 			<!-- Defining Page Content's Content -->
 			<ui:define name="content">
 				<div align="center" class="contentStyle">
-					<!-- Creating Login Form -->
+					<!-- Creating Account Creation Form -->
 					<h:form>
-						First Name: <h:inputText id="firstName" value="#{user.firstName}" title="" /> <h:message for="firstName"/> <br/>
-						Last Name: <h:inputText id="lastName" value="#{user.lastName}" title="" /> <h:message for="lastName"/> <br/> <br/>
-						<h:commandButton value="Submit" action="#{formController.onSubmit(user)}" class="contentStyle"> </h:commandButton>
+						First Name: <h:inputText id="firstName" value="#{user.firstName}" title=""/> <br/>
+						<h:message for="firstName"/> <br/>
+						
+						Last Name: <h:inputText id="lastName" value="#{user.lastName}" title="" /> <br/>
+						<h:message for="lastName"/> <br/>
+						
+						Email: <h:inputText id="email" value="#{user.email}" title="" /> <br/>
+						<h:message for="email"/> <br/>
+						
+						Username: <h:inputText id="username" value="#{user.username}" title="" /> <br/>
+						<h:message for="username"/> <br/>
+						
+						Password: <h:inputText id="password" value="#{user.password}" title="" /> <br/>
+						<h:message for="password"/> <br/>
+						
+						Birthdate: <h:inputText id="birthdate" value="#{user.birthdate}" title="" /> <br/>
+						<h:message for="birthdate"/> <br/>
+						
+						<h:commandButton value="Register Account" action="#{user.register()}" class="contentStyle"/>
 					</h:form>
-					<h:messages />
 				</div>
 			</ui:define>
 		</ui:composition>

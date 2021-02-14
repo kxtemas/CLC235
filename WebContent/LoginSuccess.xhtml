@@ -4,11 +4,18 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"> 
 
-<h:head>
-<title>Login Response</title></h:head> 
-<body> 
-<p>Hello my first name is #{user.userName} </p>
-and i believe your last name is #{user.passWord}
+<h:body>
+<ui:composition template= "/layouts/commonLayout.xhtml">
+<ui:define name = "content">
+<div align= "center">
+<h1>Welcome #{user.username}</h1> 
+<br/>
+<h:link value="View Products" outcome="MainPage"/>
 
-</body> 
+</div>
+</ui:define>
+</ui:composition>
+</h:body>
+
+
 </html>
