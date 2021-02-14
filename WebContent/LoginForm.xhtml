@@ -3,29 +3,86 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"> 
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif, }
+form {border: 3px solid #FFF8DC;}
+body{background:#FFF8DC}
+
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  position: center;
+}
+
+button {
+  background-color:#006400;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+ text-align: center;
+ 
+}
+
+
+
+}
+</style>
+</head>
 <h:body>
-		<ui:composition template="/layouts/commonLayout.xhtml">
-		
-			<!-- Defining Page Title's Content -->
-			<ui:define name="title">
-			 	Login Form
-			</ui:define>
-			
-			<!-- Defining Page Content's Content -->
-			<ui:define name="content">
-				<div align="center" class="contentStyle">
-					<!-- Creating Login Form -->
-					<h:form>
 
-Username:<h:inputText value= "#{user.userName}"/> <br/>
-Password:<h:inputText value= "#{user.passWord}"/><br/>
-<h:commandButton action="#{loginController.onSubmit()}" value="Submit" />
+<h2>Login Form</h2>
 
+<h:form>
+  <div class="imgcontainer">
+    <img src="/assignment2b/WebContent/resources/images/siteLogo.png" alt="Avatar" class="avatar"></img>
+  </div>
+
+  <div class="container">
+    <!--  <label for="uname"><b>Username</b></label>-->
+    
+   <h2>Username:</h2><h:inputText value= "#{user.username}"/>
+    <br/>
+   
+   <h2>Password:</h2><h:inputText value= "#{user.password}"/><br/>
+   <!--   <input type="password" placeholder="Enter Password" name="psw" required>-->
+        
+ 
+   <button type="submit"><h:commandButton action="#{user.authenticate()}" value="Login"/></button>
+
+     </div>
 </h:form>
-					<h:messages />
-				</div>
-			</ui:define>
-		</ui:composition>
-	</h:body> 
-</html>
 
+</h:body>
+</html>
