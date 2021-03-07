@@ -12,27 +12,27 @@ public class Products {
 	
 	int id = 0;
 
-	@NotNull(message = "Please, enter product name!")
+	@NotNull(message = "Please, enter bookname!")
 	@Size(min = 4, max = 15)
 	String bookName = "";
 	
-	@NotNull(message = "Please, enter product price!")
+	@NotNull(message = "Please, enter book price!")
 	@Max(100000)
 	float price = 0;
 	
-	@NotNull(message = "Please, enter product category!")
+	@NotNull(message = "Please, enter book genre!")
 	@Size(min = 4, max = 100)
 	String bookGenre = "";
 	
-	@NotNull(message = "Please, enter product short description!")
+	@NotNull(message = "Please, enter book author!")
 	@Size(min = 4, max = 100)
 	String bookAuthor = "";
 	
-	@NotNull(message = "Please, enter product long description!")
+	@NotNull(message = "Please, enter book description!")
 	@Size(min = 4, max = 500)
 	String bookDescription = "";
 	
-	@NotNull(message = "Please, enter product quantity!")
+	@NotNull(message = "Please, enter book quantity!")
 	@Max(10000)
 	int quantity = 0;
 	
