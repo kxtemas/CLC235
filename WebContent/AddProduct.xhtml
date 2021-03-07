@@ -13,48 +13,54 @@
 <ui:composition template="/layouts/commonLayout.xhtml">
 
 <ui:define name="content">
-			<div align="center">
+			<div align="center" class="contentStyle">
 				<f:view>
 					<h:form>
-						<table frame="box">
+						
 							<tr>
-								<td><h:outputText value="Book Name: " /></td>
+								<h4>Book Name:</h4>
 								<td><h:inputText id="name" value="#{products.bookName}" />
 								</td>
 								<td><h:message for="name" style="color:red" /></td>
 							</tr>
+							<br/>
 							<tr>
-								<td><h:outputText value="Book Author: " /></td>
+								<h4>Book Author:</h4>
 								<td><h:inputText id="category" value="#{products.bookAuthor}" /></td>
 								<td><h:message for="category" style="color:red" /></td>
 							</tr>
+							<br/>
 							<tr>
-								<td><h:outputText value="Book Description: " /></td>
+								<h4>Book Description:</h4>
 								<td><h:inputText id="short_description" value="#{products.bookDescription}" /></td>
 								<td><h:message for="short_description" style="color:red" /></td>
 							</tr>
+							<br/>
 							<tr>
-								<td><h:outputText value="Book Genre: " /></td>
-								<td><h:inputText id="long_description" value="#{products.bookAuthor}" /></td>
+								<h4>Book Genre:</h4>
+								<td><h:inputText id="long_description" value="#{products.bookGenre}" /></td>
 								<td><h:message for="long_description" style="color:red" /></td>
 							</tr>
+							<br/>
 							<tr>
-								<td><h:outputText value="Book Price: " /></td>
+								<h4>Book Price:</h4>
 								<td><h:inputText id="price" value="#{products.price}" />
 								</td>
 								<td><h:message for="price" style="color:red" /></td>
 							</tr>
+							<br/>
 							<tr>
-								<td><h:outputText value="Quantity: " /></td>
+								<h4>Book Quantity:</h4>
 								<td><h:inputText id="quantity" value="#{products.quantity}" /></td>
 								<td><h:message for="quantity" style="color:red" /></td>
 							</tr>
+							<br/>
 							<tr>
 								<td><h:commandButton value="Add Product"
-										action="#{productController.addProduct(products)}" />
+										action="#{productController.addProduct(products)}" class="button"/>
 								</td>
 							</tr>
-						</table>
+						
 					</h:form>
 				</f:view>
 			</div>

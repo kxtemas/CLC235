@@ -22,7 +22,7 @@ public class ProductBusinessService {
 	{
 		if(!findAllProducts())
 		{
-			Products p1 = new Products(0, "Romeo and Juliet", (float) 599.99, "Novel", "Shakespeare", "Love and death", 100);
+			Products p1 = new Products(0, "Romeo and Juliet", (float) 9.99, "Novel", "Shakespeare", "Love and death", 100);
 			products.add(p1);
 		}
 	}
