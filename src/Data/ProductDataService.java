@@ -89,4 +89,46 @@ public class ProductDataService {
 		} 
 		return products;
 	}
+
+	/**
+	 * Delete product by id
+	 */
+	public void deleteProduct(int book_id)
+	{
+		try
+		{
+			conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "root");
+			String sql = "DELETE FROM clc235.products WHERE id=" + book_id + ";";
+
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+			rs.close();
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		} 
+	}
+
+	/**
+	 * Update product by id
+	 */
+	 public void updateProduct(int book_id, String bookName, float price, String bookGenre, String bookAuthor, String bookDescription, int quantity)
+	 {
+		try
+		{
+			conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "root");
+			String sql = "UPDATE clc235.products SET book_name=" + bookName + ", book_author=" + bookAuthor + ", price=" + price + ", book_description=" + bookDescription + ", book_genre=" + bookGenre + ", quantity=" + quantity + " WHERE id=" + book_id + ";";
+
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+			rs.close();
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		} 
+	 }
 }
